@@ -15,7 +15,7 @@ columns = ["age", "sex", "cp", "restbp", "chol", "fbs", "restecg",
 #Reading the data fron CSV file using pandas and creating dataframe.
 df0 = pd.read_table("processed.cleveland.data.csv", sep=',', header=None, names=columns)
 
-
+#df0 = df0.iloc[0:100] #Added by Mahmoud Zeydabadinezhad
 
 #To find mean,count,etc.
 df0.describe()
@@ -220,6 +220,7 @@ stddf = stddf.reindex(columns=new_columns_2)
 # Convert dataframe into lists for use by classifiers
 yall = stddf["hd"]
 Xall = stddf[new_columns_2[1:]].values
+print(Xall)
 
 
 '''

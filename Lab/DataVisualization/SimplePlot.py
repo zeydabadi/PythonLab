@@ -39,11 +39,14 @@ print(seqs.index)
 # In this case, the argument 'A' groups the periods by year
 summed_data=seqs['Sequences'].resample('A').sum()
 print(summed_data)
-
+from matplotlib import font_manager# Added by Mahmoud Zeydabadinezhad
+font_manager.findfont('normal')# Added by Mahmoud Zeydabadinezhad
+font_manager.findfont('normal', rebuild_if_missing=True)# Added by Mahmoud Zeydabadinezhad
 #Set up Fonts for the text on the plot
 font = {'family' : 'normal',
     'weight' : 'bold',
-    'size'   : 24}
+    'size'   : 20}
+plt.rcParams['figure.figsize']=(12,6) # Added by Mahmoud Zeydabadinezhad
 plt.rc('font', **font)
 
 # plot the summed data

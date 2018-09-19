@@ -31,7 +31,10 @@ font = {'family' : 'normal',
 plt.rc('font', **font)
 
 # set up the binned data and plot a bar graph
-barPlot = binData.plot.bar(rot=0, color="b", figsize=(12,8))
+import matplotlib
+matplotlib.style.use('ggplot')
+plt.rcParams['figure.figsize']=(10,6) # Added by Mahmoud Zeydabadinezhad
+barPlot = binData.plot.bar(rot=0, color="b")  # Modified by Mahmoud Zeydabadinezhad
 barPlot.set_xticklabels(binLabels) # set x tick labels
 barPlot.set_ylabel('Number of Patients', labelpad=15) # set y label
 

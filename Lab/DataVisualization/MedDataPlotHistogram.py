@@ -27,15 +27,14 @@ print(binEdges)
  #matplotlib hist function will auto bin the data and present it as
 # a histogram
 
-n, bins, patches = plt.hist(x=medData['Age'], bins='auto', color='#0504aa',
-                        alpha=0.7, rwidth=0.85)
+n, bins, patches = plt.hist(x=medData['Age'], bins='auto', color='skyblue',
+                        alpha=0.7, rwidth=0.75)
 print('------------------')
 print(bins)
 
 #Set up Fonts for the text on the plot
-font = {'family' : 'normal',
-    'weight' : 'bold',
-    'size'   : 24}
+#font = {'family':'normal','weight':'bold','size': 24}
+font = {'family':'normal','weight':'bold','size': 18} # Mahmoud changed the font.
 plt.rc('font', **font)
 
 # the histogram set up by matplotlib can then be plotted
